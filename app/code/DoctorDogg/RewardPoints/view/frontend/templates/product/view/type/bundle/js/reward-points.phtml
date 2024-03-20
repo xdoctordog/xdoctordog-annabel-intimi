@@ -1,0 +1,9 @@
+<?php /** @var \DoctorDogg\RewardPoints\Block\Product\View\Type\Bundle\Js\RewardPoints $block */
+/**
+ * @var \DoctorDogg\RewardPoints\ViewModel\Product\View\Type\Bundle\Js\RewardPoints $viewModel
+ */
+$viewModel = $block->getViewModel();
+?>
+<div class="doctordogg-reward-points-bundle-product-block-info"
+     data-mage-init='{"DoctorDogg_RewardPoints/js/bundle-product/reward-points":{"simpleProductsConfig": <?= $viewModel->getSimpleProductsConfig() ?> }}'>
+</div>

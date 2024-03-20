@@ -1,0 +1,78 @@
+
+<!--@subject {{trans "Header"}} @-->
+<!--@vars {
+"var logo_url":"Email Logo Image URL",
+"var logo_alt":"Email Logo Alt Text",
+"var logo_height":"Email Logo Image Height",
+"var logo_width":"Email Logo Image Width",
+"var template_styles|raw":"Template CSS"
+} @-->
+
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        {{var template_styles|raw}}
+
+        {{css file="css/email.css"}}
+    </style>
+</head>
+<h1>[Annabel Intimi Header]</h1>
+<body id="annabel-intimi-email-template-body-content" >
+{{inlinecss file="css/email-inline.css"}}
+
+<!-- [START] DoctorDogg/annabel_intimi/Magento_Email/email/header.html -->
+
+<!-- Begin wrapper table -->
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+    <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+            <div class="content">
+                <!-- START CENTERED WHITE CONTAINER -->
+                <table role="presentation" class="main">
+                    <tr class="mainHeader">
+                        <td class="clip-path" width="35%">
+                            <a href="https://annabel-intimi.by">
+                                <img
+                                    src="{{view url='DoctorDogg_OrderPlaceEmailTemplate/images/logo-white.png'}}"
+                                    height="50" width="70%" alt="{{trans 'Annabel Intimi'}}"
+                                />
+                            </a>
+                            <a class="logo" href="{{store url=""}}">
+                                <img
+                                    {{if logo_width}}
+                                        width="{{var logo_width}}"
+                                    {{else}}
+                                        width="180"
+                                    {{/if}}
+
+                                    {{if logo_height}}
+                                        height="{{var logo_height}}"
+                                    {{else}}
+                                        height="100"
+                                    {{/if}}
+
+                                    src="{{var logo_url}}"
+                                    alt="{{var logo_alt}}"
+                                    border="0"
+                                />
+                            </a>
+                        </td>
+                        <td class="align-center" width="65%">
+                        </td>
+                    </tr>
+                </table>
+
+                <p class="getFrontendName" >store.getFrontendName(): {{var store.getFrontendName()}}</p>
+                <p class="store_email" >store_email: {{var store_email}}</p>
+                <p class="store_phone" >store_phone: {{var store_phone}}</p>
+                <p class="store_hours" >store_hours: {{var store_hours}}</p>
+
+                <p class="thank-you" >{{trans "Thank you for your order from %store_name." store_name=$store.getFrontendName()}}</p>
+                <p class="once-your-package" >{{trans "Once your package ships we will send you a tracking number."}}</p>
+
+                <p class="dear-first-last-name" >{{trans "Dear %first_name %last_name," first_name=$first_name last_name=$last_name}}</p>
+                <!-- [END] DoctorDogg/annabel_intimi/Magento_Email/email/header.html -->

@@ -1,0 +1,46 @@
+{
+    "name": "doctor-dogg/reward-points",
+    "description": "The extension allows users to receive bonus points for their orders, as well as spend these points on their next orders.",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Morozov Dmitriy (MAROZAU DZMITRY)",
+            "email": "castor_troy@tut.by",
+            "homepage": "https://vk.com/doctordogg",
+            "role": "Magento 2 Developer"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "version": "1.0.0",
+    "require": {
+        "php": "~7.4.0",
+        "magento/framework": "103.0.*",
+        "magento/module-bundle": "101.0.*",
+        "magento/module-checkout": "^100.1",
+        "magento/module-sales": "103.0.*",
+        "magento/module-weee": "100.4.*",
+        "magento/module-tax": "100.4.*",
+
+        "magento/module-config": "101.2.*",
+        "magento/module-eav": "102.1.*",
+        "magento/module-quote": "101.2.*",
+        "magento/module-ui": "101.2.*"
+    },
+    "suggest": {
+        "php": "~7.4.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "DoctorDogg\\RewardPoints\\": ""
+        }
+    }
+}

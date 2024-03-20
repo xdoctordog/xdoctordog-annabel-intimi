@@ -1,0 +1,21 @@
+
+/**
+ * @TODO: Doctor Dogg: example of scss style file for compiling with grunt.
+ *
+ * Here app/design/frontend/DoctorDogg/annabel_intimi/styles.css we should have the compiled css file from this file.
+ */
+
+* {
+    color: #93b362;
+}
+
+.header.panel > .header.links > li > a {
+    color: darkred;
+}
+
+/**
+ * @TODO: DOCTODOGG DID IT: Example of importing another scss file
+ * a) can be without specifying the extension
+ * b) can be without leading underscore symbol
+ */
+@import '../../SomeVendor_SomeExtension/styles/module/catalog_styles';

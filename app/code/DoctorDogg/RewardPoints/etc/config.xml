@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <doctordogg_rewardpoints_settings>
+            <rewardpoints_settings>
+                <use_simple_system_limit_usage_reward_points>1</use_simple_system_limit_usage_reward_points>
+                <limiting_way_reward_points_usage>n_percents</limiting_way_reward_points_usage>
+                <n_reward_points_per_order>5</n_reward_points_per_order>
+                <n_percent_of_order_price>5</n_percent_of_order_price>
+                <notify_days_before_expired>7</notify_days_before_expired>
+                <when_apply_reward_points>before_tax</when_apply_reward_points>
+                <display_product_reward_points>1</display_product_reward_points>
+            </rewardpoints_settings>
+        </doctordogg_rewardpoints_settings>
+    </default>
+</config>

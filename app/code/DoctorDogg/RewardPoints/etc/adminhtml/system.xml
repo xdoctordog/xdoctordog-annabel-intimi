@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="doctordogg_extensions_configuration" translate="label" sortOrder="500">
+            <label>Doctor Dogg</label>
+        </tab>
+        <section id="doctordogg_rewardpoints_settings" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Reward Points</label>
+            <tab>doctordogg_extensions_configuration</tab>
+            <resource>DoctorDoggRewardPoints_Configuration::config</resource>
+            <group id="rewardpoints_settings" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Extension Settings</label>
+                <attribute type="expanded">1</attribute>
+                <field id="use_simple_system_limit_usage_reward_points" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Simple limiting usage reward points</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Use a simple system to limit the use of reward points?]]></comment>
+                </field>
+                <field id="limiting_way_reward_points_usage" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Limiting Way of Reward Points Usage</label>
+                    <source_model>DoctorDogg\RewardPoints\Model\Config\Source\LimitWayUsageRewardPoints</source_model>
+                    <comment><![CDATA[A way to limit the use of reward points when paying for an order.]]></comment>
+                    <depends>
+                        <field id="use_simple_system_limit_usage_reward_points">1</field>
+                    </depends>
+                </field>
+                <field id="n_reward_points_per_order" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>No more than N reward points per order.</label>
+                    <comment><![CDATA[No more than N reward points per order.]]></comment>
+                    <validate>validate-zero-or-greater validate-digits validate-float-numbers</validate>
+                    <depends>
+                        <field id="use_simple_system_limit_usage_reward_points">1</field>
+                        <field id="limiting_way_reward_points_usage">n_points</field>
+                    </depends>
+                </field>
+                <field id="n_percent_of_order_price" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>% of the order price.</label>
+                    <comment><![CDATA[No more than N percents of the order price.]]></comment>
+                    <validate>validate-zero-or-greater validate-digits validate-float-numbers</validate>
+                    <depends>
+                        <field id="use_simple_system_limit_usage_reward_points">1</field>
+                        <field id="limiting_way_reward_points_usage">n_percents</field>
+                    </depends>
+                </field>
+                <field id="notify_days_before_expired" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>How to quickly notify the user that reward points are expiring.</label>
+                    <comment><![CDATA[How long before the end of the reward points should the user have information about this in his profile?(in days)]]></comment>
+                    <validate>validate-zero-or-greater validate-digits validate-float-numbers</validate>
+                </field>
+                <field id="when_apply_reward_points" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>When apply reward points</label>
+                    <source_model>DoctorDogg\RewardPoints\Model\Config\Source\WhenApplyRewardPoints</source_model>
+                    <comment><![CDATA[Apply points before tax or after.]]></comment>
+                </field>
+                <field id="display_product_reward_points" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" >
+                    <label>Display product reward points on product edit page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

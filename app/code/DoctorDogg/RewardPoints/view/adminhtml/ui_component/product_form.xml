@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="doctordogg_rewardpoints_product_form">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string">Doctor Dogg Reward Points</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="dataScope" xsi:type="string">doctordogg_rewardpoints_product_form</item>
+                <item name="sortOrder" xsi:type="number">10</item>
+                <item name="additionalClasses" xsi:type="string">doctordogg-reward-points-color-picker-wrapper</item>
+            </item>
+        </argument>
+        <settings>
+            <label/>
+            <dataScope/>
+        </settings>
+        <field name="product_color"
+               component="DoctorDogg_RewardPoints/js/components/evol-colorpicker"
+               sortOrder="10" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">Product Color</item>
+                    <item name="dataScope" xsi:type="string">product_color</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="componentType" xsi:type="string">field</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="template" xsi:type="string">DoctorDogg_RewardPoints/form/field</item>
+                    <item name="elementTmpl" xsi:type="string">DoctorDogg_RewardPoints/form/element/input</item>
+                    <item name="additionalClasses" xsi:type="string">doctordogg-reward-points-color-picker-field</item>
+                </item>
+            </argument>
+            <settings>
+                <scopeLabel>[GLOBAL]</scopeLabel>
+                    <!-- This works -->
+<!--                <dataScope>some_product_color</dataScope>-->
+            </settings>
+            <!-- This works -->
+<!--            <settings>-->
+<!--                <elementTmpl>Magento_InventoryCatalogAdminUi/product/form/cell-status</elementTmpl>-->
+<!--            </settings>-->
+        </field>
+        <colorPicker class="Magento\Ui\Component\Form\Element\ColorPicker"
+                     component="Magento_Ui/js/form/element/color-picker" template="ui/form/field">
+            <settings>
+                <elementTmpl>ui/form/element/color-picker</elementTmpl>
+                <colorFormat>rgb</colorFormat>
+                <colorPickerMode>full</colorPickerMode>
+                <dataScope>colorpicker_product_color</dataScope>
+            </settings>
+        </colorPicker>
+    </fieldset>
+</form>

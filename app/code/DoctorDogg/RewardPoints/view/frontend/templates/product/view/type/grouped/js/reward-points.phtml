@@ -1,0 +1,9 @@
+<?php /** @var \DoctorDogg\RewardPoints\Block\Product\View\Type\Grouped\Js\RewardPoints $block */
+/**
+ * @var \DoctorDogg\RewardPoints\ViewModel\Cart\RewardPoints $viewModel
+ */
+$viewModel = $block->getViewModel();
+?>
+<div class="doctordogg-reward-points-grouped-product-block-info"
+     data-mage-init='{"DoctorDogg_RewardPoints/js/grouped-product/reward-points":{"simpleProductsConfig": <?= $viewModel->getSimpleProductsConfig() ?> }}'>
+</div>

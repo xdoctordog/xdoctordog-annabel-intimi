@@ -1,0 +1,10 @@
+
+/**
+ * _theme.less
+ *
+ * This _theme.less overrides the parent _theme.less
+ * Overrides the default UI library variables values.
+ *
+ * This _theme.less breaks the compilation process.
+ *
+ */

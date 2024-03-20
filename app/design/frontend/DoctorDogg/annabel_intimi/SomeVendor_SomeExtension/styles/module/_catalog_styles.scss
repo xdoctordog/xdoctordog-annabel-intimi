@@ -1,0 +1,21 @@
+
+/**
+ * @TODO: Doctor Dogg: example of scss style file which is imported inside another scss file.
+ *
+ */
+
+.header.panel > .header.links > li > a {
+    color: #b4ff1b;
+}
+
+.abs-product-link > a:visited,
+.product-item-name > a:visited,
+.product.name a > a:visited {
+    color: #ed9494;
+}
+
+.abs-product-link > a,
+.product-item-name > a,
+.product.name a > a {
+    color: #cfb00f;
+}

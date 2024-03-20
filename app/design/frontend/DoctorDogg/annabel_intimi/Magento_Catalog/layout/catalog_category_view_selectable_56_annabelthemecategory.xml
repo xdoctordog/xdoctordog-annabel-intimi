@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!--
+            @TODO: This works inside theme for "Default Store View".
+        <!-->
+
+        <!--
+            @TODO: Container which is defined in the selectable layout inside theme.
+        <!-->
+        <container name="doctordogg.rewardpoints.annabel.theme.category" as="doctordogg.rewardpoints.annabel.theme.category">
+            <block class="Magento\Framework\View\Element\Template" name="doctordogg.rewardpoints.annabel.theme.category.template"
+                   as="doctordogg.rewardpoints.annabel.theme.category.template"
+                   after="-"
+            >
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">DoctorDogg_RewardPoints::doctordogg.rewardpoints.annabel.theme.category.template.phtml</argument>
+                </action>
+            </block>
+        </container>
+
+    </body>
+</page>

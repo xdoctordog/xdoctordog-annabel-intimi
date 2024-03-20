@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!--
+            @TODO: Looks like this selectable layout feature can work only when layout file is placed
+                   inside the extension for "All Stores View"
+                   But theme layout is available for "Default Store View".
+        <!-->
+
+        <!--
+            @TODO:  This works inside module for both "All Store Views" and "Default Store View".
+        <!-->
+        <container name="doctordogg.rewardpoints.annabel.module.product" as="doctordogg.rewardpoints.annabel.module.product">
+            <block class="Magento\Framework\View\Element\Template" name="doctordogg.rewardpoints.annabel.module.product.template"
+                   as="doctordogg.rewardpoints.annabel.module.product.template"
+                   after="-"
+            >
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">DoctorDogg_RewardPoints::doctordogg.rewardpoints.annabel.module.product.template.phtml</argument>
+                </action>
+            </block>
+        </container>
+
+    </body>
+</page>

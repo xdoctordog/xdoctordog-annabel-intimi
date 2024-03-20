@@ -1,0 +1,25 @@
+
+<div style="width: 100%; border: 5px solid orangered">
+    <pre>
+        Custom generic layout is inserted in:
+        app/code/DoctorDogg/RewardPoints/view/frontend/layout/catalog_product_view.xml
+
+        Template is:
+        app/code/DoctorDogg/RewardPoints/view/frontend/templates/doctordogg_generic_layout.template.phtml
+
+        Template is used in:
+        app/code/DoctorDogg/RewardPoints/view/frontend/layout/doctordogg_generic_layout.xml
+
+        <?php echo htmlspecialchars('
+            <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+                <container name="doctordogg.rewardpoints.custom.container" as="doctordogg.rewardpoints.custom.container">
+                    <block class="Magento\Framework\View\Element\Template" name="doctordogg_generic_layout.template"
+                           as="doctordogg_generic_layout.template"
+                           after="-"
+                           template="DoctorDogg_RewardPoints::doctordogg_generic_layout.template.phtml"
+                    />
+                </container>
+            </layout>
+        ');?>
+    </pre>
+</div>

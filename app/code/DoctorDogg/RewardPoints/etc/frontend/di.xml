@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Block\Product\AbstractProduct">
+        <plugin name="doctordogg-rewardpoints-block-product-abstract-product"
+                type="DoctorDogg\RewardPoints\Plugin\Block\Product\AbstractProduct\Plugin" sortOrder="100"/>
+    </type>
+    <type name="Magento\Framework\DataObject\IdentityInterface">
+        <plugin name="doctordogg-rewardpoints-framework-dataobject-identity-interface"
+                type="DoctorDogg\RewardPoints\Plugin\Framework\DataObject\IdentityInterface\Plugin" sortOrder="100"/>
+    </type>
+    <type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+        <plugin name="doctordogg-rewardpoints-block-product-renderer-listing-configurable"
+                type="DoctorDogg\RewardPoints\Plugin\Block\Product\Renderer\Listing\Configurable\Plugin" sortOrder="100"/>
+    </type>
+    <type name="Magento\CatalogWidget\Block\Product\ProductsList">
+        <plugin name="doctordogg-rewardpoints-block-product-list-plugin"
+                type="DoctorDogg\RewardPoints\Plugin\Block\Product\ProductsList\Plugin" sortOrder="100"/>
+    </type>
+    <type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+        <plugin name="doctordogg-rewardpoints-configurable-product-block-product-view-type-configurable-plugin"
+                type="DoctorDogg\RewardPoints\Plugin\Block\Product\View\Type\Configurable\Plugin" sortOrder="100"/>
+    </type>
+    <type name="Magento\GroupedProduct\Block\Product\View\Type\Grouped">
+        <plugin name="doctordogg-rewardpoints-grouped-product-block-product-view-type-grouped-plugin"
+                type="DoctorDogg\RewardPoints\Plugin\Block\Product\View\Type\Grouped\Plugin" sortOrder="100"/>
+    </type>
+    <type name="Magento\Bundle\Block\Catalog\Product\View\Type\Bundle\Option">
+        <plugin name="doctordogg-rewardpoints-block-catalog-product-view-type-bundle-option-radio-plugin"
+                type="DoctorDogg\RewardPoints\Plugin\Block\Catalog\Product\View\Type\Bundle\Option\Plugin" sortOrder="100"/>
+    </type>
+    <type name="DoctorDogg\RewardPoints\Model\SomeTemp">
+
+        <plugin name="doctordogg-rewardpoints-temp-plugin-full"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginFull" sortOrder="5" />
+
+        <plugin name="doctordogg-rewardpoints-temp-plugin-after-zero"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginAfterZero" sortOrder="10" />
+
+        <plugin name="doctordogg-rewardpoints-temp-plugin-around-zero"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginAroundZero" sortOrder="20" />
+
+        <plugin name="doctordogg-rewardpoints-temp-plugin-before-a"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginBeforeA" sortOrder="30" />
+        <plugin name="doctordogg-rewardpoints-temp-plugin-before-b"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginBeforeB" sortOrder="40" />
+        <plugin name="doctordogg-rewardpoints-temp-plugin-around-a"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginAroundA" sortOrder="50" />
+        <plugin name="doctordogg-rewardpoints-temp-plugin-before-c"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginBeforeC" sortOrder="60" />
+        <plugin name="doctordogg-rewardpoints-temp-plugin-around-b"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginAroundB" sortOrder="70" />
+
+        <plugin name="doctordogg-rewardpoints-temp-plugin-before-D"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginBeforeD" sortOrder="80" />
+
+        <plugin name="doctordogg-rewardpoints-temp-plugin-after-a"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginAfterA" sortOrder="90" />
+        <plugin name="doctordogg-rewardpoints-temp-plugin-after-b"
+                type="DoctorDogg\RewardPoints\Plugin\TempPluginAfterB" sortOrder="100" />
+    </type>
+    <preference for="DoctorDogg\RewardPoints\Api\ProductRegistryInterface"
+                type="DoctorDogg\RewardPoints\Model\Registry\Product\Registry" />
+</config>

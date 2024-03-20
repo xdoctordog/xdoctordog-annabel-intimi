@@ -1,0 +1,101 @@
+
+/**
+ * However, the above (adding the _extend.less) only works if the theme's parent is a Blank.
+ *
+ * The rules and variables declared in _extend.less always have precedence over ones declared in _theme.less.
+ *
+ */
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .swatch-option.text {
+        font-size: 17.777px;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .swatch-option.text {
+        font-size: 14px;
+    }
+}
+
+//
+//  Experimental desktop: It works: Both blocks for desktop are inserted inside result css file.
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .swatch-option.text {
+        font-size: 15.77px;
+    }
+}
+
+//
+//  Experimental mobile: It works: Both blocks for mobile are inserted inside result css file.
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .swatch-option.text {
+        font-size: 18.777px;
+    }
+}
+
+//
+//  @TODO: DOCTORDOGG DID IT: ! This block does not appear in result css because i don't know how it works !
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__l) {
+    .swatch-option.text {
+        font-size: 187.77px;
+    }
+}
+
+//
+//  @TODO: DOCTORDOGG DID IT: ! But this one works somehow
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .swatch-option.text {
+        font-size: 13.7987px;
+    }
+}
+
+//
+//  @TODO: DOCTORDOGG DID IT: ! But this one also works
+//  _____________________________________________
+& when (@media-target = 'mobile'), (@media-target = 'all') {
+    @media only screen and (max-width: 375px) {
+        .swatch-option.text {
+            font-size: 12.5493px;
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: (@screen__m + 1)) and (max-width: (@screen__xl - 1)) {
+        .swatch-option.text {
+            font-size: 13.0473px;
+        }
+    }
+}
+
+/**
+ * @TODO: DOCTORDOGG DID IT.
+ * https://developer.adobe.com/commerce/frontend-core/guide/responsive-design/breakpoints/
+ *
+ * Using my own custom Doctordogg's css breakpoint.
+ */
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__iksess) {
+    .swatch-option.color {
+        border: 4px solid yellowgreen;
+    }
+
+    img.product-image-photo {
+        border: 8px solid yellow;
+    }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <container name="doctordogg.rewardpoints.custom.container" as="doctordogg.rewardpoints.custom.container">
+        <!--
+            @TODO: Middle priority when using in template="" attribute.
+        <!-->
+        <block class="Magento\Framework\View\Element\Template" name="doctordogg_generic_layout.template"
+               as="doctordogg_generic_layout.template"
+               after="-"
+
+               template="DoctorDogg_RewardPoints::doctordogg_generic_layout.template.phtml"
+        >
+            <!--
+                @TODO: Lowest priority.
+            <!-->
+            <arguments>
+                <argument name="template" xsi:type="string">DoctorDogg_RewardPoints::doctordogg_generic_layout.template.arguments.template.phtml</argument>
+            </arguments>
+
+            <!--
+                @TODO: Highest priority.
+            <!-->
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">DoctorDogg_RewardPoints::doctordogg_generic_layout.template.setTemplate.phtml</argument>
+            </action>
+
+        </block>
+    </container>
+</layout>

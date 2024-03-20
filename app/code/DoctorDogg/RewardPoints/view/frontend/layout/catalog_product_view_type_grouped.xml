@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.form.content">
+            <block class="DoctorDogg\RewardPoints\Block\Product\View\Type\Grouped\Js\RewardPoints"
+                   name="doctordogg.rewardpoints.grouped.product.js.reward.points"
+                   template="DoctorDogg_RewardPoints::product/view/type/grouped/js/reward-points.phtml"
+                   after="product.info.grouped" >
+                <arguments>
+                    <argument name="view_model" xsi:type="object">DoctorDogg\RewardPoints\ViewModel\Product\View\Type\Grouped\Js\RewardPoints</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,7 @@
+<?php /** @var \DoctorDogg\RewardPoints\Block\Cart\RewardPoints $block */
+$viewModel = $block->getViewModel();
+?>
+<span class="doctordogg-reward-points checkout-cart-page">
+    <div class="coins-small"></div>
+    <span class="product-span"><?= __('Earn') ?> <span class="points"><?= __($viewModel->getQuoteTotalRewardPoints()) ?></span> <?= __('points buying this cart') ?></span>
+</span>

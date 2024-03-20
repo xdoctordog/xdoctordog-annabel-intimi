@@ -1,0 +1,52 @@
+
+define([
+    'jquery',
+    'underscore',
+    'uiComponent',
+    'mage/translate',
+    'DoctorDogg_RewardPoints/js/base/reward-points-span'
+], function (
+    $,
+    _,
+    uiComponent,
+    mageTranslate,
+    baseRewardPointsSpan
+) {
+    'use strict';
+
+    return uiComponent.extend({
+        defaults: {},
+
+        initialize: function (config, currentElement) {
+            console.log(config);
+            this._super();
+
+            const simpleProductTitleHtmlElements = $('.product-name');
+
+            if(!_.isObject(config)
+                || !_.isObject(config.simpleProductsConfig)
+                || !(simpleProductTitleHtmlElements.length)
+            ) {
+                return;
+            }
+
+            for (const [productId, options] of Object.entries(config.simpleProductsConfig)) {
+                if(!_.isObject(options)
+                    || !options.productName
+                    || !options.rewardPoints
+                ) {
+                    continue;
+                }
+                $(simpleProductTitleHtmlElements).each(function(i, productTitleElement){
+                    if(productTitleElement.innerHTML === options.productName) {
+                        let rewardPointsSpan = baseRewardPointsSpan.create(parseFloat(options.rewardPoints));
+                        $(rewardPointsSpan).addClass('doctordogg-reward-block');
+                        productTitleElement.after(rewardPointsSpan);
+                    }
+                })
+            }
+
+            return this;
+        },
+    });
+});

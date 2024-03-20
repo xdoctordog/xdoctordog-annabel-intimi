@@ -1,0 +1,12 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/doctordogg_custom.css" rel="stylesheet" type="text/css" />
+        <css src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"  src_type="url" rel="stylesheet" type="text/css"  />
+
+        <!--
+            @TODO: DOCTORDOGG DID IT: This is the compiled css file from the scss.
+            Original scss file is placed here: app/design/frontend/DoctorDogg/annabel_intimi/web/css/styles.scss
+        <!-->
+        <css src="css/styles.css"/>
+    </head>
+</page>

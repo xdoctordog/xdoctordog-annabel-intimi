@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="doctordogg_generic_layout"/>
+    <head>
+
+    </head>
+    <body>
+        <!--
+            @TODO: Example of moving element with SKU (product view page) to the another container
+        <move element="product.info.stock.sku" destination="skip_gallery_after.wrapper" after="-"/>
+        <!-->
+    </body>
+</page>

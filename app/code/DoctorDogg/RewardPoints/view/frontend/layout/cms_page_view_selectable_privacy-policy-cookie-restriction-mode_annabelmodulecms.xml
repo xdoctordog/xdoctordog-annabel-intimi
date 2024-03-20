@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!--
+            @TODO: Also works for CMS inside module.
+        <!-->
+
+        <!--
+            @TODO:  This works inside module for both "All Store Views" and "Default Store View".
+        <!-->
+        <container name="doctordogg.rewardpoints.annabel.module.cmsblock" as="doctordogg.rewardpoints.annabel.module.cmsblock">
+            <block class="Magento\Framework\View\Element\Template" name="doctordogg.rewardpoints.annabel.module.cmsblock.template"
+                   as="doctordogg.rewardpoints.annabel.module.cmsblock.template"
+                   after="-"
+            >
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">DoctorDogg_RewardPoints::doctordogg.rewardpoints.annabel.module.cmsblock.template.phtml</argument>
+                </action>
+            </block>
+        </container>
+
+    </body>
+</page>
